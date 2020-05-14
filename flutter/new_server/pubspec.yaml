@@ -11,6 +11,8 @@ dependencies:
   angel_websocket: ^2.0.3
   angel_auth: ^2.1.5+1
   angel_oauth2: ^2.3.0
+  angel_orm_postgres: ^1.0.0
+  angel_migration_runner: ^2.0.0
 dev_dependencies:
   angel_orm_generator: ^2.0.5
   angel_serialize_generator: ^2.5.0

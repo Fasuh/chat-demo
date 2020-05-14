@@ -1,18 +1,16 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'foo.dart';
+part of 'model.dart';
 
 // **************************************************************************
 // MigrationGenerator
 // **************************************************************************
 
-class FooMigration extends Migration {
+class TestMigration extends Migration {
   @override
   up(Schema schema) {
-    schema.create('foos', (table) {
+    schema.create('tests', (table) {
       table.serial('id')..primaryKey();
-      table.varChar('text');
-      table.integer('number');
       table.timeStamp('created_at');
       table.timeStamp('updated_at');
     });
@@ -20,7 +18,7 @@ class FooMigration extends Migration {
 
   @override
   down(Schema schema) {
-    schema.drop('foos');
+    schema.drop('tests');
   }
 }
 
@@ -28,44 +26,49 @@ class FooMigration extends Migration {
 // OrmGenerator
 // **************************************************************************
 
-class FooQuery extends Query<Foo, FooQueryWhere> {
-  FooQuery() {
-    _where = new FooQueryWhere(this);
+class TestQuery extends Query<Test, TestQueryWhere> {
+  TestQuery({Set<String> trampoline}) {
+    trampoline ??= Set();
+    trampoline.add(tableName);
+    _where = TestQueryWhere(this);
   }
 
   @override
-  final FooQueryValues values = new FooQueryValues();
+  final TestQueryValues values = TestQueryValues();
 
-  FooQueryWhere _where;
+  TestQueryWhere _where;
+
+  @override
+  get casts {
+    return {};
+  }
 
   @override
   get tableName {
-    return 'foos';
+    return 'tests';
   }
 
   @override
   get fields {
-    return const ['id', 'text', 'number', 'created_at', 'updated_at'];
+    return const ['id', 'created_at', 'updated_at'];
   }
 
   @override
-  FooQueryWhere get where {
+  TestQueryWhere get where {
     return _where;
   }
 
   @override
-  FooQueryWhere newWhereClause() {
-    return new FooQueryWhere(this);
+  TestQueryWhere newWhereClause() {
+    return TestQueryWhere(this);
   }
 
-  static Foo parseRow(List row) {
+  static Test parseRow(List row) {
     if (row.every((x) => x == null)) return null;
-    var model = new Foo(
+    var model = Test(
         id: row[0].toString(),
-        text: (row[1] as String),
-        number: (row[2] as int),
-        createdAt: (row[3] as DateTime),
-        updatedAt: (row[4] as DateTime));
+        createdAt: (row[1] as DateTime),
+        updatedAt: (row[2] as DateTime));
     return model;
   }
 
@@ -75,19 +78,13 @@ class FooQuery extends Query<Foo, FooQueryWhere> {
   }
 }
 
-class FooQueryWhere extends QueryWhere {
-  FooQueryWhere(FooQuery query)
-      : id = new NumericSqlExpressionBuilder<int>(query, 'id'),
-        text = new StringSqlExpressionBuilder(query, 'text'),
-        number = new NumericSqlExpressionBuilder<int>(query, 'number'),
-        createdAt = new DateTimeSqlExpressionBuilder(query, 'created_at'),
-        updatedAt = new DateTimeSqlExpressionBuilder(query, 'updated_at');
+class TestQueryWhere extends QueryWhere {
+  TestQueryWhere(TestQuery query)
+      : id = NumericSqlExpressionBuilder<int>(query, 'id'),
+        createdAt = DateTimeSqlExpressionBuilder(query, 'created_at'),
+        updatedAt = DateTimeSqlExpressionBuilder(query, 'updated_at');
 
   final NumericSqlExpressionBuilder<int> id;
-
-  final StringSqlExpressionBuilder text;
-
-  final NumericSqlExpressionBuilder<int> number;
 
   final DateTimeSqlExpressionBuilder createdAt;
 
@@ -95,31 +92,21 @@ class FooQueryWhere extends QueryWhere {
 
   @override
   get expressionBuilders {
-    return [id, text, number, createdAt, updatedAt];
+    return [id, createdAt, updatedAt];
   }
 }
 
-class FooQueryValues extends MapQueryValues {
+class TestQueryValues extends MapQueryValues {
   @override
   get casts {
     return {};
   }
 
-  int get id {
-    return (values['id'] as int);
+  String get id {
+    return (values['id'] as String);
   }
 
-  set id(int value) => values['id'] = value;
-  String get text {
-    return (values['text'] as String);
-  }
-
-  set text(String value) => values['text'] = value;
-  int get number {
-    return (values['number'] as int);
-  }
-
-  set number(int value) => values['number'] = value;
+  set id(String value) => values['id'] = value;
   DateTime get createdAt {
     return (values['created_at'] as DateTime);
   }
@@ -130,9 +117,7 @@ class FooQueryValues extends MapQueryValues {
   }
 
   set updatedAt(DateTime value) => values['updated_at'] = value;
-  void copyFrom(Foo model) {
-    text = model.text;
-    number = model.number;
+  void copyFrom(Test model) {
     createdAt = model.createdAt;
     updatedAt = model.updatedAt;
   }
@@ -143,54 +128,47 @@ class FooQueryValues extends MapQueryValues {
 // **************************************************************************
 
 @generatedSerializable
-class Foo extends _Foo {
-  Foo({this.id, this.text, this.number, this.createdAt, this.updatedAt});
+class Test extends _Test {
+  Test({this.id, this.createdAt, this.updatedAt});
 
+  /// A unique identifier corresponding to this item.
   @override
-  final String id;
+  String id;
 
+  /// The time at which this item was created.
   @override
-  final String text;
+  DateTime createdAt;
 
+  /// The last time at which this item was updated.
   @override
-  final int number;
+  DateTime updatedAt;
 
-  @override
-  final DateTime createdAt;
-
-  @override
-  final DateTime updatedAt;
-
-  Foo copyWith(
-      {String id,
-      String text,
-      int number,
-      DateTime createdAt,
-      DateTime updatedAt}) {
-    return new Foo(
+  Test copyWith({String id, DateTime createdAt, DateTime updatedAt}) {
+    return Test(
         id: id ?? this.id,
-        text: text ?? this.text,
-        number: number ?? this.number,
         createdAt: createdAt ?? this.createdAt,
         updatedAt: updatedAt ?? this.updatedAt);
   }
 
   bool operator ==(other) {
-    return other is _Foo &&
+    return other is _Test &&
         other.id == id &&
-        other.text == text &&
-        other.number == number &&
         other.createdAt == createdAt &&
         other.updatedAt == updatedAt;
   }
 
   @override
   int get hashCode {
-    return hashObjects([id, text, number, createdAt, updatedAt]);
+    return hashObjects([id, createdAt, updatedAt]);
+  }
+
+  @override
+  String toString() {
+    return "Test(id=$id, createdAt=$createdAt, updatedAt=$updatedAt)";
   }
 
   Map<String, dynamic> toJson() {
-    return FooSerializer.toMap(this);
+    return TestSerializer.toMap(this);
   }
 }
 
@@ -198,12 +176,32 @@ class Foo extends _Foo {
 // SerializerGenerator
 // **************************************************************************
 
-abstract class FooSerializer {
-  static Foo fromMap(Map map) {
-    return new Foo(
+const TestSerializer testSerializer = TestSerializer();
+
+class TestEncoder extends Converter<Test, Map> {
+  const TestEncoder();
+
+  @override
+  Map convert(Test model) => TestSerializer.toMap(model);
+}
+
+class TestDecoder extends Converter<Map, Test> {
+  const TestDecoder();
+
+  @override
+  Test convert(Map map) => TestSerializer.fromMap(map);
+}
+
+class TestSerializer extends Codec<Test, Map> {
+  const TestSerializer();
+
+  @override
+  get encoder => const TestEncoder();
+  @override
+  get decoder => const TestDecoder();
+  static Test fromMap(Map map) {
+    return Test(
         id: map['id'] as String,
-        text: map['text'] as String,
-        number: map['number'] as int,
         createdAt: map['created_at'] != null
             ? (map['created_at'] is DateTime
                 ? (map['created_at'] as DateTime)
@@ -216,34 +214,22 @@ abstract class FooSerializer {
             : null);
   }
 
-  static Map<String, dynamic> toMap(_Foo model) {
+  static Map<String, dynamic> toMap(_Test model) {
     if (model == null) {
       return null;
     }
     return {
       'id': model.id,
-      'text': model.text,
-      'number': model.number,
       'created_at': model.createdAt?.toIso8601String(),
       'updated_at': model.updatedAt?.toIso8601String()
     };
   }
 }
 
-abstract class FooFields {
-  static const List<String> allFields = const <String>[
-    id,
-    text,
-    number,
-    createdAt,
-    updatedAt
-  ];
+abstract class TestFields {
+  static const List<String> allFields = <String>[id, createdAt, updatedAt];
 
   static const String id = 'id';
-
-  static const String text = 'text';
-
-  static const String number = 'number';
 
   static const String createdAt = 'created_at';
 
