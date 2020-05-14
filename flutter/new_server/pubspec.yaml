@@ -4,12 +4,14 @@ environment:
   sdk: '>=2.0.0-dev <3.0.0'
 dependencies:
   angel_migration: ^2.0.0-alpha
-  angel_orm: ^2.0.0-dev
+  angel_orm: ^2.0.2
   angel_framework: ^2.1.1
-  angel_serialize: ^2.0.0
+  angel_serialize: ^2.2.3+3
   logger: ^0.9.1
   angel_websocket: ^2.0.3
+  angel_auth: ^2.1.5+1
+  angel_oauth2: ^2.3.0
 dev_dependencies:
-  angel_orm_generator: ^2.0.0-dev
-  angel_serialize_generator: ^2.0.0
+  angel_orm_generator: ^2.0.5
+  angel_serialize_generator: ^2.5.0
   build_runner: ^1.0.0

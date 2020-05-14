@@ -13,6 +13,7 @@ main() async {
   await app.configure(ChatController(ws).configureServer);
 
   app.get('/', (req, res) => res.write('Hello, world!'));
+  app.all("/ws", ws.handleRequest);
 
   await http.startServer('localhost', 8000);
   app.logger = Logger('main_logger');

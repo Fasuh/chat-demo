@@ -13,4 +13,10 @@ class SetNicknameEvent extends ChatEvent {
 
 class FetchMessagesEvent extends ChatEvent {}
 
-class SendMessageEvent extends ChatEvent {}
+class SendMessageEvent extends ChatEvent {
+  final String message;
+
+  SendMessageEvent(this.message);
+}
+
+class RefreshMessagesEvent extends ChatEvent {}
