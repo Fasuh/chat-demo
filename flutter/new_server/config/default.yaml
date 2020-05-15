@@ -1,0 +1,9 @@
+postgres:
+  host: 'localhost'
+  port: 5433
+  database_name: 'angel_test'
+  username: 'tester'
+  password: 'test'
+  time_zone: 'UTC'
+  timeout_in_seconds: 30
+  use_ssl: false

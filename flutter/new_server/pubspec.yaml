@@ -1,7 +1,7 @@
 name: hello
 publish_to: none
 environment:
-  sdk: '>=2.0.0-dev <3.0.0'
+  sdk: '>=2.1.0 <3.0.0'
 dependencies:
   angel_migration: ^2.0.0-alpha
   angel_orm: ^2.0.2
@@ -13,7 +13,10 @@ dependencies:
   angel_oauth2: ^2.3.0
   angel_orm_postgres: ^1.0.0
   angel_migration_runner: ^2.0.0
+  postgres: ">=0.9.5 <2.0.0"
+  angel_configuration: ^2.0.0
 dev_dependencies:
   angel_orm_generator: ^2.0.5
   angel_serialize_generator: ^2.5.0
-  build_runner: ^1.0.0
+  build_runner: ^1.10.0
+  source_gen: ^0.9.5
