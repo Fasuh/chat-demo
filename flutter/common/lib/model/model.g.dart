@@ -37,7 +37,7 @@ class UserMigration extends Migration {
 
   @override
   down(Schema schema) {
-    schema.drop('users');
+    schema.drop('users', cascade: true);
   }
 }
 
@@ -54,6 +54,25 @@ class ClientMigration extends Migration {
   @override
   down(Schema schema) {
     schema.drop('clients');
+  }
+}
+
+class RefreshTokenMigration extends Migration {
+  @override
+  up(Schema schema) {
+    schema.create('refresh_tokens', (table) {
+      table.serial('id')..primaryKey();
+      table.timeStamp('created_at');
+      table.timeStamp('updated_at');
+      table.varChar('refresh_token');
+      table.varChar('access_token');
+      table.declare('user_id', ColumnType('serial')).references('users', 'id');
+    });
+  }
+
+  @override
+  down(Schema schema) {
+    schema.drop('refresh_tokens');
   }
 }
 
@@ -163,6 +182,16 @@ class UserQuery extends Query<User, UserQueryWhere> {
     trampoline ??= Set();
     trampoline.add(tableName);
     _where = UserQueryWhere(this);
+    leftJoin(RefreshTokenQuery(trampoline: trampoline), 'id', 'user_id',
+        additionalFields: const [
+          'id',
+          'created_at',
+          'updated_at',
+          'refresh_token',
+          'access_token',
+          'user_id'
+        ],
+        trampoline: trampoline);
   }
 
   @override
@@ -211,12 +240,75 @@ class UserQuery extends Query<User, UserQueryWhere> {
         username: (row[3] as String),
         password: (row[4] as String),
         salt: (row[5] as String));
+    if (row.length > 6) {
+      model = model.copyWith(
+          tokens: [RefreshTokenQuery.parseRow(row.skip(6).take(6).toList())]
+              .where((x) => x != null)
+              .toList());
+    }
     return model;
   }
 
   @override
   deserialize(List row) {
     return parseRow(row);
+  }
+
+  @override
+  get(QueryExecutor executor) {
+    return super.get(executor).then((result) {
+      return result.fold<List<User>>([], (out, model) {
+        var idx = out.indexWhere((m) => m.id == model.id);
+
+        if (idx == -1) {
+          return out..add(model);
+        } else {
+          var l = out[idx];
+          return out
+            ..[idx] = l.copyWith(
+                tokens: List<_RefreshToken>.from(l.tokens ?? [])
+                  ..addAll(model.tokens ?? []));
+        }
+      });
+    });
+  }
+
+  @override
+  update(QueryExecutor executor) {
+    return super.update(executor).then((result) {
+      return result.fold<List<User>>([], (out, model) {
+        var idx = out.indexWhere((m) => m.id == model.id);
+
+        if (idx == -1) {
+          return out..add(model);
+        } else {
+          var l = out[idx];
+          return out
+            ..[idx] = l.copyWith(
+                tokens: List<_RefreshToken>.from(l.tokens ?? [])
+                  ..addAll(model.tokens ?? []));
+        }
+      });
+    });
+  }
+
+  @override
+  delete(QueryExecutor executor) {
+    return super.delete(executor).then((result) {
+      return result.fold<List<User>>([], (out, model) {
+        var idx = out.indexWhere((m) => m.id == model.id);
+
+        if (idx == -1) {
+          return out..add(model);
+        } else {
+          var l = out[idx];
+          return out
+            ..[idx] = l.copyWith(
+                tokens: List<_RefreshToken>.from(l.tokens ?? [])
+                  ..addAll(model.tokens ?? []));
+        }
+      });
+    });
   }
 }
 
@@ -389,6 +481,155 @@ class ClientQueryValues extends MapQueryValues {
   }
 }
 
+class RefreshTokenQuery extends Query<RefreshToken, RefreshTokenQueryWhere> {
+  RefreshTokenQuery({Set<String> trampoline}) {
+    trampoline ??= Set();
+    trampoline.add(tableName);
+    _where = RefreshTokenQueryWhere(this);
+    leftJoin('users', 'user_id', 'id',
+        additionalFields: const [
+          'id',
+          'created_at',
+          'updated_at',
+          'username',
+          'password',
+          'salt'
+        ],
+        trampoline: trampoline);
+  }
+
+  @override
+  final RefreshTokenQueryValues values = RefreshTokenQueryValues();
+
+  RefreshTokenQueryWhere _where;
+
+  @override
+  get casts {
+    return {};
+  }
+
+  @override
+  get tableName {
+    return 'refresh_tokens';
+  }
+
+  @override
+  get fields {
+    return const [
+      'id',
+      'created_at',
+      'updated_at',
+      'refresh_token',
+      'access_token',
+      'user_id'
+    ];
+  }
+
+  @override
+  RefreshTokenQueryWhere get where {
+    return _where;
+  }
+
+  @override
+  RefreshTokenQueryWhere newWhereClause() {
+    return RefreshTokenQueryWhere(this);
+  }
+
+  static RefreshToken parseRow(List row) {
+    if (row.every((x) => x == null)) return null;
+    var model = RefreshToken(
+        id: row[0].toString(),
+        createdAt: (row[1] as DateTime),
+        updatedAt: (row[2] as DateTime),
+        refreshToken: (row[3] as String),
+        accessToken: (row[4] as String));
+    if (row.length > 6) {
+      model = model.copyWith(
+          user: UserQuery.parseRow(row.skip(6).take(6).toList()));
+    }
+    return model;
+  }
+
+  @override
+  deserialize(List row) {
+    return parseRow(row);
+  }
+}
+
+class RefreshTokenQueryWhere extends QueryWhere {
+  RefreshTokenQueryWhere(RefreshTokenQuery query)
+      : id = NumericSqlExpressionBuilder<int>(query, 'id'),
+        createdAt = DateTimeSqlExpressionBuilder(query, 'created_at'),
+        updatedAt = DateTimeSqlExpressionBuilder(query, 'updated_at'),
+        refreshToken = StringSqlExpressionBuilder(query, 'refresh_token'),
+        accessToken = StringSqlExpressionBuilder(query, 'access_token'),
+        userId = NumericSqlExpressionBuilder<int>(query, 'user_id');
+
+  final NumericSqlExpressionBuilder<int> id;
+
+  final DateTimeSqlExpressionBuilder createdAt;
+
+  final DateTimeSqlExpressionBuilder updatedAt;
+
+  final StringSqlExpressionBuilder refreshToken;
+
+  final StringSqlExpressionBuilder accessToken;
+
+  final NumericSqlExpressionBuilder<int> userId;
+
+  @override
+  get expressionBuilders {
+    return [id, createdAt, updatedAt, refreshToken, accessToken, userId];
+  }
+}
+
+class RefreshTokenQueryValues extends MapQueryValues {
+  @override
+  get casts {
+    return {};
+  }
+
+  String get id {
+    return (values['id'] as String);
+  }
+
+  set id(String value) => values['id'] = value;
+  DateTime get createdAt {
+    return (values['created_at'] as DateTime);
+  }
+
+  set createdAt(DateTime value) => values['created_at'] = value;
+  DateTime get updatedAt {
+    return (values['updated_at'] as DateTime);
+  }
+
+  set updatedAt(DateTime value) => values['updated_at'] = value;
+  String get refreshToken {
+    return (values['refresh_token'] as String);
+  }
+
+  set refreshToken(String value) => values['refresh_token'] = value;
+  String get accessToken {
+    return (values['access_token'] as String);
+  }
+
+  set accessToken(String value) => values['access_token'] = value;
+  int get userId {
+    return (values['user_id'] as int);
+  }
+
+  set userId(int value) => values['user_id'] = value;
+  void copyFrom(RefreshToken model) {
+    createdAt = model.createdAt;
+    updatedAt = model.updatedAt;
+    refreshToken = model.refreshToken;
+    accessToken = model.accessToken;
+    if (model.user != null) {
+      values['user_id'] = model.user.id;
+    }
+  }
+}
+
 // **************************************************************************
 // JsonModelGenerator
 // **************************************************************************
@@ -446,7 +687,9 @@ class User extends _User {
       this.updatedAt,
       this.username,
       this.password,
-      this.salt});
+      this.salt,
+      List<_RefreshToken> tokens})
+      : this.tokens = List.unmodifiable(tokens ?? []);
 
   /// A unique identifier corresponding to this item.
   @override
@@ -469,20 +712,25 @@ class User extends _User {
   @override
   final String salt;
 
+  @override
+  final List<_RefreshToken> tokens;
+
   User copyWith(
       {String id,
       DateTime createdAt,
       DateTime updatedAt,
       String username,
       String password,
-      String salt}) {
+      String salt,
+      List<_RefreshToken> tokens}) {
     return User(
         id: id ?? this.id,
         createdAt: createdAt ?? this.createdAt,
         updatedAt: updatedAt ?? this.updatedAt,
         username: username ?? this.username,
         password: password ?? this.password,
-        salt: salt ?? this.salt);
+        salt: salt ?? this.salt,
+        tokens: tokens ?? this.tokens);
   }
 
   bool operator ==(other) {
@@ -492,17 +740,20 @@ class User extends _User {
         other.updatedAt == updatedAt &&
         other.username == username &&
         other.password == password &&
-        other.salt == salt;
+        other.salt == salt &&
+        ListEquality<_RefreshToken>(DefaultEquality<_RefreshToken>())
+            .equals(other.tokens, tokens);
   }
 
   @override
   int get hashCode {
-    return hashObjects([id, createdAt, updatedAt, username, password, salt]);
+    return hashObjects(
+        [id, createdAt, updatedAt, username, password, salt, tokens]);
   }
 
   @override
   String toString() {
-    return "User(id=$id, createdAt=$createdAt, updatedAt=$updatedAt, username=$username, password=$password, salt=$salt)";
+    return "User(id=$id, createdAt=$createdAt, updatedAt=$updatedAt, username=$username, password=$password, salt=$salt, tokens=$tokens)";
   }
 
   Map<String, dynamic> toJson() {
@@ -552,6 +803,129 @@ class Client extends _Client {
 
   Map<String, dynamic> toJson() {
     return ClientSerializer.toMap(this);
+  }
+}
+
+@generatedSerializable
+class RefreshToken extends _RefreshToken {
+  RefreshToken(
+      {this.id,
+      this.createdAt,
+      this.updatedAt,
+      this.refreshToken,
+      this.accessToken,
+      this.user});
+
+  /// A unique identifier corresponding to this item.
+  @override
+  String id;
+
+  /// The time at which this item was created.
+  @override
+  DateTime createdAt;
+
+  /// The last time at which this item was updated.
+  @override
+  DateTime updatedAt;
+
+  @override
+  final String refreshToken;
+
+  @override
+  final String accessToken;
+
+  @override
+  final _User user;
+
+  RefreshToken copyWith(
+      {String id,
+      DateTime createdAt,
+      DateTime updatedAt,
+      String refreshToken,
+      String accessToken,
+      _User user}) {
+    return RefreshToken(
+        id: id ?? this.id,
+        createdAt: createdAt ?? this.createdAt,
+        updatedAt: updatedAt ?? this.updatedAt,
+        refreshToken: refreshToken ?? this.refreshToken,
+        accessToken: accessToken ?? this.accessToken,
+        user: user ?? this.user);
+  }
+
+  bool operator ==(other) {
+    return other is _RefreshToken &&
+        other.id == id &&
+        other.createdAt == createdAt &&
+        other.updatedAt == updatedAt &&
+        other.refreshToken == refreshToken &&
+        other.accessToken == accessToken &&
+        other.user == user;
+  }
+
+  @override
+  int get hashCode {
+    return hashObjects(
+        [id, createdAt, updatedAt, refreshToken, accessToken, user]);
+  }
+
+  @override
+  String toString() {
+    return "RefreshToken(id=$id, createdAt=$createdAt, updatedAt=$updatedAt, refreshToken=$refreshToken, accessToken=$accessToken, user=$user)";
+  }
+
+  Map<String, dynamic> toJson() {
+    return RefreshTokenSerializer.toMap(this);
+  }
+}
+
+@generatedSerializable
+class AuthCredentials implements _AuthCredentials {
+  const AuthCredentials(
+      {this.client, this.username, this.password, this.scopes});
+
+  @override
+  final _Client client;
+
+  @override
+  final String username;
+
+  @override
+  final String password;
+
+  @override
+  final List<String> scopes;
+
+  AuthCredentials copyWith(
+      {_Client client, String username, String password, List<String> scopes}) {
+    return AuthCredentials(
+        client: client ?? this.client,
+        username: username ?? this.username,
+        password: password ?? this.password,
+        scopes: scopes ?? this.scopes);
+  }
+
+  bool operator ==(other) {
+    return other is _AuthCredentials &&
+        other.client == client &&
+        other.username == username &&
+        other.password == password &&
+        ListEquality<String>(DefaultEquality<String>())
+            .equals(other.scopes, scopes);
+  }
+
+  @override
+  int get hashCode {
+    return hashObjects([client, username, password, scopes]);
+  }
+
+  @override
+  String toString() {
+    return "AuthCredentials(client=$client, username=$username, password=$password, scopes=$scopes)";
+  }
+
+  Map<String, dynamic> toJson() {
+    return AuthCredentialsSerializer.toMap(this);
   }
 }
 
@@ -657,7 +1031,11 @@ class UserSerializer extends Codec<User, Map> {
             : null,
         username: map['username'] as String,
         password: map['password'] as String,
-        salt: map['salt'] as String);
+        salt: map['salt'] as String,
+        tokens: map['tokens'] is Iterable
+            ? List.unmodifiable(((map['tokens'] as Iterable).whereType<Map>())
+                .map(RefreshTokenSerializer.fromMap))
+            : null);
   }
 
   static Map<String, dynamic> toMap(_User model) {
@@ -670,7 +1048,9 @@ class UserSerializer extends Codec<User, Map> {
       'updated_at': model.updatedAt?.toIso8601String(),
       'username': model.username,
       'password': model.password,
-      'salt': model.salt
+      'salt': model.salt,
+      'tokens':
+          model.tokens?.map((m) => RefreshTokenSerializer.toMap(m))?.toList()
     };
   }
 }
@@ -682,7 +1062,8 @@ abstract class UserFields {
     updatedAt,
     username,
     password,
-    salt
+    salt,
+    tokens
   ];
 
   static const String id = 'id';
@@ -696,6 +1077,8 @@ abstract class UserFields {
   static const String password = 'password';
 
   static const String salt = 'salt';
+
+  static const String tokens = 'tokens';
 }
 
 const ClientSerializer clientSerializer = ClientSerializer();
@@ -756,4 +1139,151 @@ abstract class ClientFields {
   static const String createdAt = 'created_at';
 
   static const String updatedAt = 'updated_at';
+}
+
+const RefreshTokenSerializer refreshTokenSerializer = RefreshTokenSerializer();
+
+class RefreshTokenEncoder extends Converter<RefreshToken, Map> {
+  const RefreshTokenEncoder();
+
+  @override
+  Map convert(RefreshToken model) => RefreshTokenSerializer.toMap(model);
+}
+
+class RefreshTokenDecoder extends Converter<Map, RefreshToken> {
+  const RefreshTokenDecoder();
+
+  @override
+  RefreshToken convert(Map map) => RefreshTokenSerializer.fromMap(map);
+}
+
+class RefreshTokenSerializer extends Codec<RefreshToken, Map> {
+  const RefreshTokenSerializer();
+
+  @override
+  get encoder => const RefreshTokenEncoder();
+  @override
+  get decoder => const RefreshTokenDecoder();
+  static RefreshToken fromMap(Map map) {
+    return RefreshToken(
+        id: map['id'] as String,
+        createdAt: map['created_at'] != null
+            ? (map['created_at'] is DateTime
+                ? (map['created_at'] as DateTime)
+                : DateTime.parse(map['created_at'].toString()))
+            : null,
+        updatedAt: map['updated_at'] != null
+            ? (map['updated_at'] is DateTime
+                ? (map['updated_at'] as DateTime)
+                : DateTime.parse(map['updated_at'].toString()))
+            : null,
+        refreshToken: map['refresh_token'] as String,
+        accessToken: map['access_token'] as String,
+        user: map['user'] != null
+            ? UserSerializer.fromMap(map['user'] as Map)
+            : null);
+  }
+
+  static Map<String, dynamic> toMap(_RefreshToken model) {
+    if (model == null) {
+      return null;
+    }
+    return {
+      'id': model.id,
+      'created_at': model.createdAt?.toIso8601String(),
+      'updated_at': model.updatedAt?.toIso8601String(),
+      'refresh_token': model.refreshToken,
+      'access_token': model.accessToken,
+      'user': UserSerializer.toMap(model.user)
+    };
+  }
+}
+
+abstract class RefreshTokenFields {
+  static const List<String> allFields = <String>[
+    id,
+    createdAt,
+    updatedAt,
+    refreshToken,
+    accessToken,
+    user
+  ];
+
+  static const String id = 'id';
+
+  static const String createdAt = 'created_at';
+
+  static const String updatedAt = 'updated_at';
+
+  static const String refreshToken = 'refresh_token';
+
+  static const String accessToken = 'access_token';
+
+  static const String user = 'user';
+}
+
+const AuthCredentialsSerializer authCredentialsSerializer =
+    AuthCredentialsSerializer();
+
+class AuthCredentialsEncoder extends Converter<AuthCredentials, Map> {
+  const AuthCredentialsEncoder();
+
+  @override
+  Map convert(AuthCredentials model) => AuthCredentialsSerializer.toMap(model);
+}
+
+class AuthCredentialsDecoder extends Converter<Map, AuthCredentials> {
+  const AuthCredentialsDecoder();
+
+  @override
+  AuthCredentials convert(Map map) => AuthCredentialsSerializer.fromMap(map);
+}
+
+class AuthCredentialsSerializer extends Codec<AuthCredentials, Map> {
+  const AuthCredentialsSerializer();
+
+  @override
+  get encoder => const AuthCredentialsEncoder();
+  @override
+  get decoder => const AuthCredentialsDecoder();
+  static AuthCredentials fromMap(Map map) {
+    return AuthCredentials(
+        client: map['client'] != null
+            ? ClientSerializer.fromMap(map['client'] as Map)
+            : null,
+        username: map['username'] as String,
+        password: map['password'] as String,
+        scopes: map['scopes'] is Iterable
+            ? (map['scopes'] as Iterable).cast<String>().toList()
+            : null);
+  }
+
+  static Map<String, dynamic> toMap(_AuthCredentials model) {
+    if (model == null) {
+      return null;
+    }
+    return {
+      'client': ClientSerializer.toMap(model.client),
+      'username': model.username,
+      'password': model.password,
+      'scopes': model.scopes
+    };
+  }
+}
+
+abstract class AuthCredentialsFields {
+  static const List<String> allFields = <String>[
+    client,
+    username,
+    password,
+    scopes
+  ];
+
+  static const String client = 'client';
+
+  static const String username = 'username';
+
+  static const String password = 'password';
+
+  static const String scopes = 'scopes';
 }

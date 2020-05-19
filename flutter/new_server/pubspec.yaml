@@ -7,7 +7,6 @@ dependencies:
   angel_orm: ^2.0.2
   angel_framework: ^2.1.1
   angel_serialize: ^2.2.3+3
-  logger: ^0.9.1
   angel_websocket: ^2.0.3
   angel_auth: ^2.1.5+1
   angel_oauth2: ^2.3.0
@@ -16,6 +15,7 @@ dependencies:
   postgres: ^2.1.1
   angel_configuration: ^2.0.0
   password_hash: ^2.0.0
+  corsac_jwt: ^0.2.2
   common:
     path: ../common
 dev_dependencies:
