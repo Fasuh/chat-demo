@@ -2,6 +2,6 @@ part of 'model.dart';
 
 @Orm()
 @serializable
-class _Test extends Model {
+abstract class _Client extends Model{
 
 }

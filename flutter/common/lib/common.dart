@@ -1,1 +1,2 @@
-export 'src/models/models.dart';
+export 'model/model.dart';
+export 'helper/validate.dart';

@@ -1,0 +1,16 @@
+#targets:
+#  $default:
+#    dependencies:
+#      - common:common
+#    sources:
+#      - lib/model/model.dart
+#
+#targets:
+#  _standalone:
+#    sources:
+#      - lib/src/models/foo.dart
+#  $default:
+#    dependencies:
+#      - :_standalone
+#    sources:
+#      - lib/src/models/bar.dart
