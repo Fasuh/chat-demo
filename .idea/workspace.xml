@@ -6,13 +6,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="05ec2091-8dc2-483b-bcc1-9cdef73236eb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter/.slugignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter/common/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/flutter/common/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter/common/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/flutter/common/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter/new_server/Procfile" beforeDir="false" afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter/new_server/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/flutter/new_server/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Procfile" beforeDir="false" afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,11 +30,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/flutter/common/pubspec.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
+            <state relative-caret-position="272">
+              <caret line="16" column="15" lean-forward="true" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -62,11 +57,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Procfile">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
-              <caret line="1" column="43" selection-start-line="1" selection-start-column="43" selection-end-line="1" selection-end-column="43" />
+              <caret line="1" column="93" selection-start-line="1" selection-start-column="93" selection-end-line="1" selection-end-column="93" />
             </state>
           </provider>
         </entry>
@@ -189,9 +184,9 @@
         <option value="$PROJECT_DIR$/flutter/new_server/.gitignore" />
         <option value="$PROJECT_DIR$/flutter/.slugignore" />
         <option value="$PROJECT_DIR$/.slugignore" />
-        <option value="$PROJECT_DIR$/Procfile" />
         <option value="$PROJECT_DIR$/flutter/new_server/pubspec.yaml" />
         <option value="$PROJECT_DIR$/flutter/common/pubspec.yaml" />
+        <option value="$PROJECT_DIR$/Procfile" />
       </list>
     </option>
   </component>
@@ -395,7 +390,21 @@
       <option name="project" value="LOCAL" />
       <updated>1589978307152</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="angel_production">
+      <created>1589979485924</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1589979485924</updated>
+    </task>
+    <task id="LOCAL-00012" summary="angel_production">
+      <created>1589979675428</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1589979675428</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -873,13 +882,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Procfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="43" selection-start-line="1" selection-start-column="43" selection-end-line="1" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/flutter/new_server/pubspec.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -889,8 +891,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/flutter/common/pubspec.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="272">
+          <caret line="16" column="15" lean-forward="true" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Procfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="93" selection-start-line="1" selection-start-column="93" selection-end-line="1" selection-end-column="93" />
         </state>
       </provider>
     </entry>
