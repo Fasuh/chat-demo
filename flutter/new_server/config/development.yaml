@@ -1,0 +1,9 @@
+postgres:
+  host: 'ec2-54-246-87-132.eu-west-1.compute.amazonaws.com'
+  port: 5432
+  database_name: 'd1ach8pj0db9t2'
+  username: 'ocqfxmmcdmmgon'
+  password: '2c4d55855c1bd22bcef71c27a5a57d9f979edc618383131a3598b17147610be9'
+  time_zone: 'UTC'
+  timeout_in_seconds: 30
+  use_ssl: false

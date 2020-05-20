@@ -5,12 +5,8 @@
     <bookmark url="file://$PROJECT_DIR$/flutter/new_server/lib/services.dart" line="11" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="05ec2091-8dc2-483b-bcc1-9cdef73236eb" name="Default Changelist" comment="angel_production">
+    <list default="true" id="05ec2091-8dc2-483b-bcc1-9cdef73236eb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter/new_server/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/flutter/new_server/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter/new_server/Procfile" beforeDir="false" afterPath="$PROJECT_DIR$/flutter/new_server/Procfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter/new_server/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter/new_server/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter/new_server/lib/services.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter/new_server/lib/services.dart" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,20 +41,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/flutter/new_server/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="119">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/flutter/new_server/Procfile">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
-              <caret line="1" column="49" selection-start-line="1" selection-start-column="49" selection-end-line="1" selection-end-column="49" />
+              <caret line="1" column="56" lean-forward="true" selection-start-line="1" selection-start-column="56" selection-end-line="1" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -191,8 +187,8 @@
         <option value="$PROJECT_DIR$/flutter/new_server/lib/services.dart" />
         <option value="$PROJECT_DIR$/flutter/new_server/lib/main.dart" />
         <option value="$PROJECT_DIR$/flutter/new_server/config/heroku.yaml" />
-        <option value="$PROJECT_DIR$/flutter/new_server/.gitignore" />
         <option value="$PROJECT_DIR$/flutter/new_server/Procfile" />
+        <option value="$PROJECT_DIR$/flutter/new_server/.gitignore" />
       </list>
     </option>
   </component>
@@ -389,7 +385,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589972036739</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="angel_production">
+      <created>1589972183106</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1589972183106</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -867,13 +870,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/flutter/new_server/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/flutter/new_server/config/development.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -884,7 +880,14 @@
     <entry file="file://$PROJECT_DIR$/flutter/new_server/Procfile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
-          <caret line="1" column="49" selection-start-line="1" selection-start-column="49" selection-end-line="1" selection-end-column="49" />
+          <caret line="1" column="56" lean-forward="true" selection-start-line="1" selection-start-column="56" selection-end-line="1" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flutter/new_server/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
