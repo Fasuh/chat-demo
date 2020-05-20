@@ -1,2 +1,2 @@
 release: /app/dart-sdk/bin/pub run lib/migration.dart up
-web: /app/dart-sdk/bin/pub global run aqueduct:aqueduct serve --port $PORT --config-path heroku.yaml
+web: /app/dart-sdk/bin/pub run ib/main.dart --port $PORT
