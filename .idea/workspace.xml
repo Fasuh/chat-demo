@@ -6,7 +6,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="05ec2091-8dc2-483b-bcc1-9cdef73236eb" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter/.slugignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter/common/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/flutter/common/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter/common/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/flutter/common/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter/new_server/Procfile" beforeDir="false" afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flutter/new_server/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/flutter/new_server/pubspec.yaml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,29 +29,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/flutter/new_server/pubspec.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+            <state relative-caret-position="272">
+              <caret line="16" selection-start-line="16" selection-end-line="19" selection-end-column="47" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/flutter/.slugignore">
+        <entry file="file://$PROJECT_DIR$/flutter/common/pubspec.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="11" selection-start-column="11" selection-end-column="11" />
+            <state relative-caret-position="306">
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/flutter/new_server/lib/migration.dart">
+        <entry file="file://$PROJECT_DIR$/.slugignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="78" selection-start-line="24" selection-start-column="78" selection-end-line="24" selection-end-column="78" />
-              <folding>
-                <element signature="e#0#68#0" expanded="true" />
-              </folding>
+            <state>
+              <caret column="19" selection-start-column="19" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -61,10 +63,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/flutter/new_server/Procfile">
+        <entry file="file://$PROJECT_DIR$/Procfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="9" selection-start-column="9" selection-end-column="30" />
+            <state relative-caret-position="17">
+              <caret line="1" column="43" selection-start-line="1" selection-start-column="43" selection-end-line="1" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -139,8 +141,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/flutter/new_client/lib/logic/chat/chat_event.dart" />
-        <option value="$PROJECT_DIR$/flutter/new_client/lib/logic/chat/chat_state.dart" />
         <option value="$PROJECT_DIR$/flutter/new_client/lib/main.dart" />
         <option value="$PROJECT_DIR$/flutter/new_client/pubspec.yaml" />
         <option value="$PROJECT_DIR$/flutter/new_server/bin/socket_controller/chat_controller.dart" />
@@ -165,7 +165,6 @@
         <option value="$PROJECT_DIR$/flutter/new_server/lib/helper/error_handler.dart" />
         <option value="$PROJECT_DIR$/flutter/new_server/lib/controller/test_controller.dart" />
         <option value="$PROJECT_DIR$/flutter/common/test/helper/validators_test.dart" />
-        <option value="$PROJECT_DIR$/flutter/common/pubspec.yaml" />
         <option value="$PROJECT_DIR$/flutter/new_server/test.dart" />
         <option value="$PROJECT_DIR$/flutter/new_server/test/auth/auth.dart" />
         <option value="$PROJECT_DIR$/flutter/new_server/test/auth.dart" />
@@ -188,8 +187,11 @@
         <option value="$PROJECT_DIR$/flutter/new_server/config/heroku.yaml" />
         <option value="$PROJECT_DIR$/flutter/new_server/Procfile" />
         <option value="$PROJECT_DIR$/flutter/new_server/.gitignore" />
-        <option value="$PROJECT_DIR$/flutter/new_server/pubspec.yaml" />
         <option value="$PROJECT_DIR$/flutter/.slugignore" />
+        <option value="$PROJECT_DIR$/.slugignore" />
+        <option value="$PROJECT_DIR$/Procfile" />
+        <option value="$PROJECT_DIR$/flutter/new_server/pubspec.yaml" />
+        <option value="$PROJECT_DIR$/flutter/common/pubspec.yaml" />
       </list>
     </option>
   </component>
@@ -217,6 +219,18 @@
               <item name="chat_example" type="b2602c69:ProjectViewProjectNode" />
               <item name="chat_example" type="462c0819:PsiDirectoryNode" />
               <item name="flutter" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="chat_example" type="b2602c69:ProjectViewProjectNode" />
+              <item name="chat_example" type="462c0819:PsiDirectoryNode" />
+              <item name="flutter" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="chat_example" type="b2602c69:ProjectViewProjectNode" />
+              <item name="chat_example" type="462c0819:PsiDirectoryNode" />
+              <item name="flutter" type="462c0819:PsiDirectoryNode" />
+              <item name="new_server" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -246,6 +260,7 @@
       <recent name="C:\Users\bbkk9\Desktop\chat_example\flutter\common" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\bbkk9\Desktop\chat_example" />
       <recent name="C:\Users\bbkk9\Desktop\chat_example\flutter\common\lib" />
     </key>
   </component>
@@ -366,7 +381,21 @@
       <option name="project" value="LOCAL" />
       <updated>1589972210770</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="angel_production">
+      <created>1589978203626</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1589978203626</updated>
+    </task>
+    <task id="LOCAL-00010" summary="angel_production">
+      <created>1589978307152</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1589978307152</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -385,7 +414,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.18710022" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.18710022" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Designer" order="4" />
@@ -396,7 +425,7 @@
       <window_info anchor="bottom" id="Run" order="1" weight="0.32936078" />
       <window_info anchor="bottom" id="TODO" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3488624" />
-      <window_info anchor="bottom" id="Terminal" order="4" visible="true" weight="0.32936078" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="4" visible="true" weight="0.32936078" />
       <window_info anchor="bottom" id="GitLabIntegration" order="5" />
       <window_info anchor="bottom" id="Flutter Performance" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="7" />
@@ -540,13 +569,6 @@
           <folding>
             <element signature="e#0#45#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flutter/common/pubspec.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
@@ -785,13 +807,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/flutter/new_server/pubspec.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/flutter/new_server/lib/main.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -813,13 +828,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flutter/new_server/Procfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="9" selection-start-column="9" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -858,10 +866,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/flutter/.slugignore">
+    <entry file="file://$PROJECT_DIR$/.slugignore">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="11" selection-start-column="11" selection-end-column="11" />
+          <caret column="19" selection-start-column="19" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Procfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="43" selection-start-line="1" selection-start-column="43" selection-end-line="1" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flutter/new_server/pubspec.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" selection-start-line="16" selection-end-line="19" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flutter/common/pubspec.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
         </state>
       </provider>
     </entry>

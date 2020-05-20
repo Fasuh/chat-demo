@@ -10,8 +10,14 @@ dependencies:
   angel_websocket: ^2.0.3
   angel_auth: ^2.1.5+1
   angel_oauth2: ^2.3.0
-  angel_orm_postgres: ^1.1.0-beta.1
-  angel_migration_runner: ^2.0.0
+  angel_orm_postgres:
+    git:
+      url: https://github.com/Fasuh/angel.git
+      path: packages/orm/angel_orm_postgres
+  angel_migration_runner:
+    git:
+      url: https://github.com/Fasuh/angel.git
+      path: packages/orm/angel_migration_runner
   postgres: ^2.1.1
   angel_configuration: ^2.0.0
   password_hash: ^2.0.0

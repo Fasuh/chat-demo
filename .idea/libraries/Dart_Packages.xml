@@ -68,7 +68,7 @@
         <entry key="angel_migration_runner">
           <value>
             <list>
-              <option value="$USER_HOME$/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/angel_migration_runner-2.0.0/lib" />
+              <option value="$USER_HOME$/AppData/Roaming/Pub/Cache/git/angel-ec7fb65fa1170f84e4c1a1b29d52d51add5b94c4/packages/orm/angel_migration_runner/lib" />
             </list>
           </value>
         </entry>
@@ -104,7 +104,7 @@
         <entry key="angel_orm_postgres">
           <value>
             <list>
-              <option value="$USER_HOME$/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/angel_orm_postgres-1.1.0-beta.1/lib" />
+              <option value="$USER_HOME$/AppData/Roaming/Pub/Cache/git/angel-ec7fb65fa1170f84e4c1a1b29d52d51add5b94c4/packages/orm/angel_orm_postgres/lib" />
             </list>
           </value>
         </entry>
@@ -884,6 +884,8 @@
       </option>
     </properties>
     <CLASSES>
+      <root url="file://$USER_HOME$/AppData/Roaming/Pub/Cache/git/angel-ec7fb65fa1170f84e4c1a1b29d52d51add5b94c4/packages/orm/angel_migration_runner/lib" />
+      <root url="file://$USER_HOME$/AppData/Roaming/Pub/Cache/git/angel-ec7fb65fa1170f84e4c1a1b29d52d51add5b94c4/packages/orm/angel_orm_postgres/lib" />
       <root url="file://$USER_HOME$/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/_fe_analyzer_shared-3.0.0/lib" />
       <root url="file://$USER_HOME$/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/analyzer-0.39.8/lib" />
       <root url="file://$USER_HOME$/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/angel_auth-2.1.5+1/lib" />
@@ -893,13 +895,11 @@
       <root url="file://$USER_HOME$/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/angel_framework-2.1.1/lib" />
       <root url="file://$USER_HOME$/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/angel_http_exception-1.1.0/lib" />
       <root url="file://$USER_HOME$/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/angel_migration-2.0.0/lib" />
-      <root url="file://$USER_HOME$/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/angel_migration_runner-2.0.0/lib" />
       <root url="file://$USER_HOME$/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/angel_model-1.0.3/lib" />
       <root url="file://$USER_HOME$/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/angel_oauth2-2.3.0/lib" />
       <root url="file://$USER_HOME$/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/angel_orm-2.0.2/lib" />
       <root url="file://$USER_HOME$/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/angel_orm-2.1.0-beta.3/lib" />
       <root url="file://$USER_HOME$/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/angel_orm_generator-2.0.5/lib" />
-      <root url="file://$USER_HOME$/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/angel_orm_postgres-1.1.0-beta.1/lib" />
       <root url="file://$USER_HOME$/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/angel_production-1.0.0/lib" />
       <root url="file://$USER_HOME$/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/angel_route-3.1.0+1/lib" />
       <root url="file://$USER_HOME$/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/angel_serialize-2.2.3+3/lib" />

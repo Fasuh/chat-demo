@@ -25,9 +25,11 @@ packages:
   angel_migration_runner:
     dependency: "direct main"
     description:
-      name: angel_migration_runner
-      url: "https://pub.dartlang.org"
-    source: hosted
+      path: "packages/orm/angel_migration_runner"
+      ref: HEAD
+      resolved-ref: ec7fb65fa1170f84e4c1a1b29d52d51add5b94c4
+      url: "https://github.com/Fasuh/angel.git"
+    source: git
     version: "2.0.0"
   angel_model:
     dependency: "direct main"

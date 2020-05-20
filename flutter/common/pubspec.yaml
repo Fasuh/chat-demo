@@ -5,7 +5,10 @@ dependencies:
   angel_model: ^1.0.3
   angel_orm: ^2.0.2
   angel_serialize: ^2.2.3+3
-  angel_migration_runner: ^2.0.0
+  angel_migration_runner:
+    git:
+      url: https://github.com/Fasuh/angel.git
+      path: packages/orm/angel_migration_runner
   enum_to_string: ^1.0.9
 dev_dependencies:
   angel_orm_generator: ^2.0.5
