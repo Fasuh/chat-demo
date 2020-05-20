@@ -5,32 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="05ec2091-8dc2-483b-bcc1-9cdef73236eb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/flutter/common/lib/model/auth_credentials.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter/common/lib/model/error.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter/common/lib/model/refresh_token.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter/common/test/.test_coverage.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter/common/test/helper/validators_test.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter/new_server/lib/controller/test_controller.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter/new_server/lib/extensions/auth_credentials.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter/new_server/lib/extensions/refresh_token.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter/new_server/lib/extensions/request.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter/new_server/lib/extensions/user.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter/new_server/lib/helper/auth_token.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter/new_server/lib/helper/authentication.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flutter/new_server/lib/helper/error_handler.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flutter/new_server/lib/extensions/model.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter/common/lib/model/client.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter/common/lib/model/client.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flutter/common/lib/model/model.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter/common/lib/model/model.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter/common/lib/model/model.g.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter/common/lib/model/model.g.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter/common/lib/model/user.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter/common/lib/model/user.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter/common/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/flutter/common/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter/common/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/flutter/common/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter/new_server/lib/authentication/auth.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter/new_server/lib/authentication/auth.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter/new_server/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter/new_server/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter/new_server/lib/migration.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter/new_server/lib/migration.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter/new_server/lib/socket_controller/auth_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter/new_server/lib/controller/auth_controller.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter/new_server/lib/socket_controller/chat_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/flutter/new_server/lib/controller/chat_controller.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flutter/new_server/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/flutter/new_server/pubspec.yaml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -46,100 +24,111 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/flutter/common/lib/model/model.g.dart">
+        <entry file="file://$PROJECT_DIR$/flutter/new_server/lib/extensions/refresh_token.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="892" column="11" lean-forward="true" selection-start-line="892" selection-start-column="11" selection-end-line="892" selection-end-column="11" />
+            <state relative-caret-position="170">
+              <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+              <folding>
+                <element signature="e#0#42#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/flutter/common/lib/model/refresh_token.dart">
+        <entry file="file://$PROJECT_DIR$/flutter/new_server/lib/helper/auth_token.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
+            <state relative-caret-position="459">
+              <caret line="27" column="9" lean-forward="true" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
+              <folding>
+                <element signature="e#0#54#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/flutter/common/lib/model/test.dart">
+        <entry file="file://$PROJECT_DIR$/flutter/new_server/pubspec.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="1" />
+            <state relative-caret-position="289">
+              <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/flutter/common/lib/model/user.dart">
+        <entry file="file://$PROJECT_DIR$/flutter/new_server/lib/extensions/request.dart">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
-              <caret line="4" column="31" lean-forward="true" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="34" />
+              <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+              <folding>
+                <element signature="e#0#54#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/angel_model-1.0.3/lib/angel_model.dart">
+        <entry file="file://$PROJECT_DIR$/flutter/new_server/lib/extensions/model.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
+            <state relative-caret-position="51">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/flutter/common/lib/model/model.dart">
+        <entry file="file://$PROJECT_DIR$/flutter/new_server/lib/authentication/auth.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
+            <state relative-caret-position="355">
+              <caret line="59" column="3" lean-forward="true" selection-start-line="59" selection-start-column="3" selection-end-line="59" selection-end-column="3" />
               <folding>
-                <element signature="e#334#354#0" expanded="true" />
+                <element signature="e#0#20#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/flutter/new_server/lib/controller/chat_controller.dart">
+        <entry file="file://$PROJECT_DIR$/flutter/new_server/lib/controller/auth_controller.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" selection-start-line="12" selection-end-line="12" />
+            <state relative-caret-position="374">
+              <caret line="27" column="3" lean-forward="true" selection-start-line="27" selection-start-column="3" selection-end-line="27" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/flutter/new_server/lib/extensions/user.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
               <folding>
-                <element signature="e#0#54#0" expanded="true" />
+                <element signature="e#0#42#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/flutter/new_server/lib/controller/test_controller.dart">
+        <entry file="file://$PROJECT_DIR$/flutter/new_server/lib/extensions/auth_credentials.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
+              <folding>
+                <element signature="e#0#20#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/flutter/new_server/lib/helper/authentication.dart">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
-              <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
               <folding>
-                <element signature="e#0#54#0" expanded="true" />
+                <element signature="e#0#20#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/flutter/common/lib/model/auth_credentials.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/angel_serialize-2.2.3+3/lib/angel_serialize.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="109" column="19" selection-start-line="109" selection-start-column="19" selection-end-line="109" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -203,21 +192,21 @@
         <option value="$PROJECT_DIR$/flutter/new_server/test.dart" />
         <option value="$PROJECT_DIR$/flutter/new_server/test/auth/auth.dart" />
         <option value="$PROJECT_DIR$/flutter/new_server/test/auth.dart" />
-        <option value="$PROJECT_DIR$/flutter/new_server/pubspec.yaml" />
         <option value="$PROJECT_DIR$/flutter/common/lib/model/refresh_token.dart" />
         <option value="$PROJECT_DIR$/flutter/common/lib/model/user.dart" />
         <option value="$PROJECT_DIR$/flutter/new_server/lib/extensions/request.dart" />
-        <option value="$PROJECT_DIR$/flutter/new_server/lib/extensions/refresh_token.dart" />
+        <option value="$PROJECT_DIR$/flutter/common/lib/model/client.dart" />
+        <option value="$PROJECT_DIR$/flutter/common/lib/model/auth_credentials.dart" />
+        <option value="$PROJECT_DIR$/flutter/common/lib/model/model.dart" />
+        <option value="$PROJECT_DIR$/flutter/new_server/lib/extensions/model.dart" />
+        <option value="$PROJECT_DIR$/flutter/new_server/pubspec.yaml" />
+        <option value="$PROJECT_DIR$/flutter/new_server/lib/extensions/user.dart" />
+        <option value="$PROJECT_DIR$/flutter/new_server/lib/helper/authentication.dart" />
+        <option value="$PROJECT_DIR$/flutter/new_server/lib/extensions/auth_credentials.dart" />
+        <option value="$PROJECT_DIR$/flutter/new_server/lib/controller/auth_controller.dart" />
         <option value="$PROJECT_DIR$/flutter/new_server/lib/authentication/auth.dart" />
         <option value="$PROJECT_DIR$/flutter/new_server/lib/helper/auth_token.dart" />
-        <option value="$PROJECT_DIR$/flutter/new_server/lib/helper/authentication.dart" />
-        <option value="$PROJECT_DIR$/flutter/new_server/lib/extensions/user.dart" />
-        <option value="$PROJECT_DIR$/flutter/common/lib/model/client.dart" />
-        <option value="$PROJECT_DIR$/flutter/new_server/lib/controller/auth_controller.dart" />
-        <option value="$PROJECT_DIR$/flutter/new_server/lib/extensions/auth_credentials.dart" />
-        <option value="$PROJECT_DIR$/flutter/common/lib/model/auth_credentials.dart" />
-        <option value="$PROJECT_DIR$/flutter/new_server/lib/extensions/model.dart" />
-        <option value="$PROJECT_DIR$/flutter/common/lib/model/model.dart" />
+        <option value="$PROJECT_DIR$/flutter/new_server/lib/extensions/refresh_token.dart" />
       </list>
     </option>
   </component>
@@ -233,6 +222,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -311,12 +302,19 @@
               <item name="lib" type="462c0819:PsiDirectoryNode" />
               <item name="helper" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="chat_example" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="chat_example" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Dart Packages" type="3dd79eb:DartTreeStructureProvider$1" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -418,7 +416,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589873659557</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="authentication">
+      <created>1589932505328</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1589932505328</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -437,7 +442,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.17803837" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.17963752" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Designer" order="4" />
@@ -448,7 +453,7 @@
       <window_info anchor="bottom" id="Run" order="1" weight="0.32936078" />
       <window_info anchor="bottom" id="TODO" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.3488624" />
-      <window_info anchor="bottom" id="Terminal" order="4" weight="0.32719395" />
+      <window_info anchor="bottom" id="Terminal" order="4" weight="0.32827735" />
       <window_info anchor="bottom" id="GitLabIntegration" order="5" />
       <window_info anchor="bottom" id="Flutter Performance" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="7" />
@@ -489,7 +494,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="migration and database" />
-    <option name="LAST_COMMIT_MESSAGE" value="migration and database" />
+    <MESSAGE value="authentication" />
+    <option name="LAST_COMMIT_MESSAGE" value="authentication" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -542,20 +548,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://C:/src/flutter/bin/cache/pkg/sky_engine/lib/core/stacktrace.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="17" column="15" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/angel_framework-2.1.1/lib/src/core/server.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-210">
-          <caret line="96" column="9" selection-start-line="96" selection-start-column="9" selection-end-line="96" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/logging-0.11.4/lib/src/logger.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="731">
@@ -602,13 +594,6 @@
           <folding>
             <element signature="e#0#68#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/angel_orm-2.0.2/lib/src/query.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="357" column="21" selection-start-line="357" selection-start-column="21" selection-end-line="357" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -705,13 +690,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/flutter/new_server/pubspec.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/angel_orm-2.0.2/lib/src/relations.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -726,70 +704,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/flutter/new_server/lib/extensions/request.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#54#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/angel_framework-2.1.1/lib/src/core/request_context.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
           <caret line="235" column="15" selection-start-line="235" selection-start-column="15" selection-end-line="235" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flutter/new_server/lib/authentication/auth.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="54" column="39" selection-start-line="54" selection-start-column="39" selection-end-line="54" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flutter/new_server/lib/extensions/refresh_token.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="13" column="1" selection-end-line="13" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#54#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flutter/new_server/lib/helper/auth_token.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="27" column="12" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#54#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flutter/new_server/lib/helper/authentication.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="17" column="54" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="54" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flutter/new_server/lib/extensions/user.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#54#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -807,26 +725,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/flutter/new_server/lib/controller/auth_controller.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="20" column="82" selection-start-line="20" selection-start-column="82" selection-end-line="20" selection-end-column="82" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flutter/new_server/lib/extensions/auth_credentials.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="1" lean-forward="true" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/angel_serialize-2.2.3+3/lib/angel_serialize.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
@@ -841,24 +739,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/flutter/common/lib/model/refresh_token.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/flutter/common/lib/model/test.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flutter/common/lib/model/user.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="31" lean-forward="true" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -889,26 +773,144 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/flutter/new_server/lib/extensions/model.dart">
+    <entry file="file://$PROJECT_DIR$/flutter/common/lib/model/model.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+        <state relative-caret-position="119">
+          <caret line="13" column="29" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flutter/common/lib/model/user.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="10" lean-forward="true" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flutter/common/lib/model/refresh_token.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="12" lean-forward="true" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/flutter/common/lib/model/model.g.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="892" column="11" lean-forward="true" selection-start-line="892" selection-start-column="11" selection-end-line="892" selection-end-column="11" />
+        <state relative-caret-position="979">
+          <caret line="523" column="14" selection-start-line="523" selection-start-column="7" selection-end-line="523" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/flutter/common/lib/model/model.dart">
+    <entry file="file://$USER_HOME$/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/angel_orm-2.0.2/lib/src/query.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="662" column="41" selection-start-line="662" selection-start-column="41" selection-end-line="662" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/angel_orm-2.1.0-beta.3/lib/src/query_executor.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
+          <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/angel_orm_postgres-1.0.0/lib/angel_orm_postgres.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="14" column="37" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flutter/new_server/pubspec.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flutter/new_server/lib/extensions/user.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
           <folding>
-            <element signature="e#334#354#0" expanded="true" />
+            <element signature="e#0#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flutter/new_server/lib/helper/authentication.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flutter/new_server/lib/extensions/model.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flutter/new_server/lib/extensions/auth_credentials.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flutter/new_server/lib/controller/auth_controller.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="27" column="3" lean-forward="true" selection-start-line="27" selection-start-column="3" selection-end-line="27" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flutter/new_server/lib/extensions/request.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#54#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flutter/new_server/lib/helper/auth_token.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="9" lean-forward="true" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#54#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flutter/new_server/lib/extensions/refresh_token.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flutter/new_server/lib/authentication/auth.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="59" column="3" lean-forward="true" selection-start-line="59" selection-start-column="3" selection-end-line="59" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
           </folding>
         </state>
       </provider>

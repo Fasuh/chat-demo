@@ -4,13 +4,13 @@ environment:
   sdk: 2.7.0
 dependencies:
   angel_migration: ^2.0.0-alpha
-  angel_orm: ^2.0.2
+  angel_orm: ^2.1.0-beta.3
   angel_framework: ^2.1.1
   angel_serialize: ^2.2.3+3
   angel_websocket: ^2.0.3
   angel_auth: ^2.1.5+1
   angel_oauth2: ^2.3.0
-  angel_orm_postgres: ^1.0.0
+  angel_orm_postgres: ^1.1.0-beta.1
   angel_migration_runner: ^2.0.0
   postgres: ^2.1.1
   angel_configuration: ^2.0.0
