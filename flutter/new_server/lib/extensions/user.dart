@@ -1,41 +1,35 @@
-import 'package:angel_framework/angel_framework.dart';
+import 'package:angel_orm/angel_orm.dart';
 import 'package:common/model/model.dart';
-import 'package:hello/extensions/request.dart';
 import 'package:password_hash/password_hash.dart';
 
 extension UserExt on User {
-  static Future<User> getById(RequestContext req, int userId) async {
+  static Future<User> getById(QueryExecutor tx, int userId) async {
     final query = UserQuery()
       ..where.id.equals(userId);
-    return _getSingleFromQuery(req, query);
+    return _getSingleFromQuery(tx, query);
   }
 
-  static Future<User> getByUsername(RequestContext req, String username) async {
+  static Future<User> getByUsername(QueryExecutor tx, String username) async {
     final query = UserQuery()
       ..where.username.equals(username);
-    return _getSingleFromQuery(req, query);
+    return _getSingleFromQuery(tx, query);
   }
 
-  static Future<bool> nameExists(RequestContext req, String username) async {
-    final query = UserQuery()
-      ..where.username.equals(username);
-    return (await _getSingleFromQuery(req, query)) != null;
+  static Future<bool> nameExists(QueryExecutor tx, String username) async =>
+    (await getByUsername(tx, username)) != null;
+
+  static Future<User> _getSingleFromQuery(QueryExecutor tx, UserQuery query) {
+    return query.getOne(tx);
   }
 
-  static Future<User> _getSingleFromQuery(RequestContext req, UserQuery query) {
-    final executor = req.getExecutor;
-    return query.getOne(executor);
-  }
-
-  static Future<User> addNewUser(RequestContext req, String username, String password) {
-    final executor = req.getExecutor;
+  static Future<User> addNewUser(QueryExecutor tx, String username, String password) {
     final salt = Salt.generateAsBase64String(32);
     final hash = _hashPassword(password, salt);
     final user = UserQuery()
       ..values.username = username
       ..values.salt = salt
       ..values.password = hash;
-    return user.insert(executor);
+    return user.insert(tx);
   }
 
   bool checkIfPasswordMatches(String password) {

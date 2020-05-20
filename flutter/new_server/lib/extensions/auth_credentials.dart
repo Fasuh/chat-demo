@@ -8,7 +8,7 @@ extension AuthCredentialsExt on AuthCredentials {
   PasswordValidator get passwordValidator => PasswordValidator();
   EmailValidator get emailValidator => EmailValidator();
 
-  Future<List<PomError>> checkCredentials(RequestContext req) async  {
+  Future<List<PomError>> checkCredentials() async  {
     List<PomError> errors = [];
 
     if(!emailValidator.validate(username)) {

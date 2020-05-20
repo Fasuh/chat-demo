@@ -2,7 +2,6 @@ import 'package:angel_framework/angel_framework.dart';
 import 'package:angel_oauth2/angel_oauth2.dart';
 import 'package:common/model/model.dart';
 import 'package:corsac_jwt/corsac_jwt.dart';
-import 'package:hello/extensions/request.dart';
 
 class CustomAuthorizationTokenResponse extends AuthorizationTokenResponse {
   static const String secret = "lkKnXzMjlNULMsCiAU7N5BMrbbDvJ8GD7tS5H1QwzJUMELAqpB87xrM9RwgCBzh";
@@ -40,14 +39,5 @@ class CustomAuthorizationTokenResponse extends AuthorizationTokenResponse {
   static int getUserId(String token) {
     var decodedToken = new JWT.parse(token);
     return int.parse(decodedToken.claims['data']['userId']);
-  }
-
-  Future saveRefreshToken(RequestContext req) {
-    final executor = req.getExecutor;
-    final query = RefreshTokenQuery()
-      ..values.refreshToken = refreshToken
-      ..values.accessToken = accessToken;
-//        ..values. = getUserId; TODO - user
-    return query.insert(executor);
   }
 }

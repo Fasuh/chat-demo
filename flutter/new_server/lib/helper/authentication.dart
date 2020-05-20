@@ -4,6 +4,7 @@ import 'dart:io';
 import 'package:angel_framework/angel_framework.dart';
 import 'package:hello/extensions/user.dart';
 import 'package:hello/helper/auth_token.dart';
+import 'package:hello/extensions/request.dart';
 
 FutureOr<bool> authenticationMiddleware(RequestContext req, ResponseContext res) {
   try {
@@ -20,6 +21,6 @@ FutureOr<bool> authenticationDeserializeUserMiddleware(RequestContext req, Respo
   await req.parseBody();
   final token = req.params['token'] as CustomAuthorizationTokenResponse;
   final id = CustomAuthorizationTokenResponse.getUserId(token.accessToken);
-  req.params['user'] = await UserExt.getById(req, id);
+  req.params['user'] = await UserExt.getById(req.getExecutor, id);
   return true;
 }
