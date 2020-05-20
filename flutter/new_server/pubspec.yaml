@@ -1,7 +1,7 @@
 name: hello
 publish_to: none
 environment:
-  sdk: 2.7.0
+  sdk: ">=2.6.0 <3.0.0"
 dependencies:
   angel_migration: ^2.0.0-alpha
   angel_orm: ^2.1.0-beta.3
