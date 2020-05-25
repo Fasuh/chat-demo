@@ -22,4 +22,6 @@ Future<PostgresMigrationRunner> migrationRunner() async {
   );
 }
 
-main(List<String> args) async => runMigrations(await migrationRunner(), args);
+main(List<String> args) async {
+  return runMigrations(await migrationRunner(), args);
+}
