@@ -31,7 +31,6 @@ PostgreSQLConnection _connectToPostgresFromUrl(String url) {
 
 PostgreSQLConnection connectToPostgres(Map config) {
   if(config['postgre_url'] == null) {
-    print("its null, hecks");
     return _connectToPostgresFromConfig(config);
   } else {
     return _connectToPostgresFromUrl(config['postgre_url'] as String);

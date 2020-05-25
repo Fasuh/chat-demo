@@ -26,5 +26,5 @@ Future configureServer(Angel app) async {
   await app.configure(TestController().configureServer);
   await app.configure(configureServerORM);
 
-//  app.all("/ws", ws.handleRequest); TODO - test
+//  app.all("/ws", ws.handleRequest); TODO - test if works without it
 }
