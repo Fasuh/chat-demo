@@ -10,7 +10,9 @@ import 'package:hello/controller/test_controller.dart';
 import 'package:file/local.dart';
 import 'package:hello/services.dart';
 
-main(List<String> args) => Runner('pom', configureServer, reflector: MirrorsReflector()).run(args);
+main(List<String> args) {
+  return Runner('pom', configureServer, reflector: MirrorsReflector()).run(args);
+}
 
 Future configureServer(Angel app) async {
   var auth = AuthServer();

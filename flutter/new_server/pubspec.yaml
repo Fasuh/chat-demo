@@ -23,6 +23,7 @@ dependencies:
   password_hash: ^2.0.0
   corsac_jwt: ^0.2.2
   angel_production: ^1.0.0
+  args: ^1.6.0
   common:
     path: ../common
 dev_dependencies:
