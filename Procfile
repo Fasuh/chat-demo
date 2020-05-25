@@ -1,2 +1,2 @@
-release: cd flutter/new_server && echo "postgre_url: ${DATABASE_URL}" && echo "postgre_url: ${DATABASE_URL}" > config/production.yaml && /app/dart-sdk/bin/pub run lib/migration.dart up
+release: cd flutter/new_server && echo "postgre_url: ${DATABASE_URL}" && echo "postgre_url: ${DATABASE_URL}" > config/development.yaml && /app/dart-sdk/bin/pub run lib/migration.dart up
 web: cd flutter/new_server && /app/dart-sdk/bin/pub run lib/main.dart --port $PORT --address $ADDRESS
